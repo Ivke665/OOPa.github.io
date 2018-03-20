@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!----custom CSS------>
+<link href="css/main.css" rel="stylesheet">
+
+<script src="js/main.js" charset="utf-8"></script>
+
+<style>
+footer {
+  margin-top: 150px;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center" style="margin-top:-20px">
+    <h1>Online Organska Pijaca</h1>
+    <p>Vrednost,Zdravlje,Priroda</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src="img/lif.gif" width="50px" height="50px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><font color="white">Home</font></a></li>
+        <li><a href="udruzenje.html"><font color="white">O Nama</font></a></li>
+        <li><a href="forum.html"><font color="white">OOP-a Forum</font></a></li>
+        <!--<li><a href="#"><font color="white"></font></a></li>-->
+        <li><a href="reklamiranje.html"><font color="white">Reklamiranje</font></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="onama.html"><span class="glyphicon glyphicon-user" style="color:white"></span><font color="white">Profil</font></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart" style="color:white"></span><font color="white"></font></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div ng-controller="mc2">
+  <div class="container">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr class="info">
+          <th>Ime/Korisni&#269;ko ime</th>
+          <th>Tema/Pitanje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="forum in allForum">
+          <td>{{forum.name}}</td>
+          <td ng-class="classType"><a href="#">{{forum.genre}}</a></td>
+        </tbody>
+      </table><br>
+      <input type="text" class="form-control" ng-model="classType" placeholder="Enter class name">
+      <h3>{{ classType}}</h3>
+    </div>
+  </div>
+
+  <!-----------footer------------>
+  <footer>
+    <center>
+      <p><i class="fa fa-copyright"></i>Ivan Stojanovic 2018</p>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity" style="font-size:24px;color:white"></a></i>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram w3-hover-opacity" style="font-size:24px;color:white"></i>
+    <a href="https://www.snapchat.com/" target="_blank"><i class="fa fa-snapchat w3-hover-opacity" style="font-size:24px;color:white"></i>
+    <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity" style="font-size:24px;color:white"></i>
+    <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter w3-hover-opacity" style="font-size:24px;color:white"></i>
+    <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity" style="font-size:24px;color:white"></i>
+    </center>
+  </footer>
+
+
+
+  <script src="js/forumDB.js"></script>
+</body>
+</html>

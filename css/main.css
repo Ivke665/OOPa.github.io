@@ -1,0 +1,40 @@
+body {
+  font-family: "Arial";
+}
+  /* Remove the navbar's default rounded borders and increase the bottom margin */
+.navbar {
+  margin-bottom: 50px;
+  border-radius: 0;
+  background-color: #66b032;
+}
+
+  /* Remove the jumbotron's default bottom margin */
+.jumbotron {
+  margin-bottom: -45px;
+  background-color: #ffffcc;
+}
+
+  /* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #66b032;
+  
+  padding: 30px;
+}
+.sign {
+  text-align: center;
+  padding: 10px;
+}
+form {
+  margin-left: 10px;
+}
+
+/*forum*/
+.Lekovito {
+  background-color: beige;
+}
+.Recepti {
+  background-color: #fafad2;
+}
+.Dostava {
+  background-color: #90ee90;
+}
